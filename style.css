@@ -318,11 +318,6 @@ a {
     }
 
     .maxLineHeight {
-        line-height: 30pt;
-    }
-
-    p,
-    article {
-        padding: 10px 10px;
+        line-height: 36pt;
     }
 }
