@@ -326,7 +326,8 @@ a {
         line-height: 6pt;
     }
 
-    p {
-        padding: 0px 10px;
+    p,
+    article {
+        padding: 10px 10px;
     }
 }
