@@ -245,7 +245,7 @@ a {
 
 @media only screen and (max-width: 1109px) {
     body {
-        margin: 10% 5% 10% 5%;
+        margin: 9%;
         text-align: center;
     }
 
@@ -323,6 +323,6 @@ a {
     }
 
     .maxLineHeight {
-        line-height: 36pt;
+        line-height: 6pt;
     }
 }
