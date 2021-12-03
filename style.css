@@ -279,7 +279,6 @@ a {
         justify-content: space-around;
         background-color: #CAEBF2;
         color: #000;
-        /* height: 30px; */
         text-align: center;
         letter-spacing: 2px;
         padding-top: 8px;
@@ -319,7 +318,7 @@ a {
     }
 
     .maxLineHeight {
-        line-height: 6pt;
+        line-height: 30pt;
     }
 
     p,
