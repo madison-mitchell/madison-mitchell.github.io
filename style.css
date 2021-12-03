@@ -1,0 +1,321 @@
+body {
+    background-color: #EFEFEF;
+    margin: 10% 20% 10% 20%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#navigation {
+    grid-area: navigation;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #CAEBF2;
+    color: #000;
+    height: 30px;
+    text-align: center;
+    letter-spacing: 2px;
+    padding-top: 8px;
+    padding-left: 60px;
+    padding-right: 60px;
+    line-height: 20pt;
+}
+
+#photo {
+    grid-area: photo;
+    background-color: #FF3B3f;
+    height: 215px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 15px;
+}
+
+#header {
+    grid-area: header;
+    background-color: #CAEBF2;
+    height: fit-content;
+    text-align: center;
+    font-size: xx-large;
+    line-height: 30%;
+    padding-top: 25px;
+    padding: 20px 20px;
+}
+
+#contact {
+    grid-area: contact;
+    background-color: #CAEBF2;
+    height: fit-content;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+#socials {
+    grid-area: socials;
+    background-color: #CAEBF2;
+    height: fit-content;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+#aboutMe {
+    grid-area: aboutMe;
+    background-color: #CAEBF2;
+    text-align: center;
+    height: auto;
+    padding: 20px 20px;
+}
+
+#skills {
+    grid-area: skills;
+    background-color: #A9A9A9;
+    text-align: center;
+    font-size: large;
+    padding: 20px 20px;
+}
+
+#projects {
+    grid-area: projects;
+    background-color: #CAEBF2;
+    text-align: center;
+    font-size: large;
+    padding: 20px 20px;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+#one,
+#two,
+#three {
+    padding: 20px 20px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #CAEBF2;
+    text-align: center;
+    padding-top: 5px;
+    height: 25px;
+}
+
+img {
+    display: inline;
+    margin: 0 auto;
+    width: auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.icon {
+    display: inline;
+    margin: 0 auto;
+    width: auto;
+    height: 310px;
+    padding: 10px 20px;
+}
+
+h1 {
+    font-family: 'Birthstone Bounce', cursive;
+    font-size: 36pt;
+    color: #FF3B3f;
+    text-align: center;
+}
+
+h2 {
+    font-size: large;
+    color: #A9A9A9;
+    text-align: center;
+}
+
+h3 {
+    font-size: x-large;
+    color: #FF3B3f;
+    text-align: center;
+}
+
+h4 {
+    font-size: x-large;
+    font-weight: normal;
+    color: #A9A9A9;
+    text-align: center;
+    display: inline;
+    padding-top: 10px;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0px 0px 0px 0px;
+}
+
+.sectionHeader {
+    margin-bottom: 5px;
+}
+
+p {
+    text-align: justify;
+}
+
+.smallBox {
+    width: 300px;
+}
+
+article {
+    justify-content: center;
+}
+
+
+.wrapper {
+    color: #000;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 220px 1fr 1fr;
+    grid-template-areas:
+        "navigation navigation navigation"
+        "photo header header"
+        "photo contact socials"
+        "skills aboutMe aboutMe"
+        "skills aboutMe aboutMe"
+        "projects projects projects"
+        "footer footer footer";
+}
+
+div,
+nav {
+    border-radius: 8px;
+}
+
+
+a:hover {
+    color: #FF3B3f;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    padding: 0px 15px;
+}
+
+.icon:hover {
+    transform: scale(1.5);
+}
+
+:target {
+    -webkit-animation: target-fade 1s;
+    animation: target-fade 1s;
+}
+
+@-webkit-keyframes target-fade {
+    from {
+        background-color: #FF3B3f;
+    }
+
+    to {
+        background-color: transparent;
+    }
+}
+
+@keyframes target-fade {
+    from {
+        background-color: #FF3B3f;
+    }
+
+    to {
+        background-color: transparent;
+    }
+}
+
+@media only screen and (min-width: 1110px) {
+    #navigationMobile {
+        grid-area: contactMobile;
+        display: none;
+    }
+
+    #contactMobile {
+        grid-area: contactMobile;
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1109px) {
+    body {
+        margin: 10% 14% 10% 14%;
+        text-align: center;
+    }
+
+    .wrapper {
+        color: #000;
+        display: grid;
+        text-align: center;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "navigation navigation"
+            "photo photo"
+            "header header"
+            "contactMobile socials"
+            "aboutMe aboutMe"
+            "skills skills"
+            "projects projects"
+            "footer footer";
+    }
+
+    #photo {
+        grid-area: photo;
+        background-color: #FF3B3f;
+        height: 210px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        padding-top: 15px;
+    }
+
+    #navigationMobile {
+        grid-area: navigation;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        background-color: #CAEBF2;
+        color: #000;
+        /* height: 30px; */
+        text-align: center;
+        letter-spacing: 2px;
+        padding-top: 8px;
+        padding-left: 60px;
+        padding-right: 60px;
+        line-height: 20pt;
+    }
+
+    #contactMobile {
+        grid-area: contactMobile;
+        background-color: #CAEBF2;
+        height: fit-content;
+        padding: 20px 20px;
+        text-align: center;
+    }
+
+    #navigation {
+        display: none;
+    }
+
+    #contact {
+        display: none;
+    }
+
+
+    img {
+        display: inline;
+        margin: 0 auto;
+        height: 100%;
+        width: auto;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+}
