@@ -23,11 +23,11 @@ body {
 #photo {
     grid-area: photo;
     background-color: #FF3B3f;
-    height: 215px;
+    height: auto;
     position: relative;
     overflow: hidden;
     text-align: center;
-    padding-top: 15px;
+    padding-top: 15%;
 }
 
 #header {
@@ -140,6 +140,12 @@ h3 {
     text-align: center;
 }
 
+h1,
+h2,
+h3 {
+    margin: 0px 0px 0px 0px;
+}
+
 h4 {
     font-size: x-large;
     font-weight: normal;
@@ -149,20 +155,18 @@ h4 {
     padding-top: 10px;
 }
 
-h1,
-h2,
-h3 {
-    margin: 0px 0px 0px 0px;
-}
-
 .sectionHeader {
     margin-bottom: 5px;
 }
 
-p,
-article {
+p {
     text-align: justify;
 }
+
+article {
+    text-align: center;
+}
+
 
 .smallBox {
     width: 300px;
