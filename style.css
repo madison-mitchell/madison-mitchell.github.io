@@ -321,4 +321,8 @@ a {
     .minLineHeight {
         line-height: 6pt;
     }
+
+    .maxLineHeight {
+        line-height: 36pt;
+    }
 }
