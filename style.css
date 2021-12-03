@@ -182,7 +182,6 @@ article {
         "photo header header"
         "photo contact socials"
         "skills aboutMe aboutMe"
-        "skills aboutMe aboutMe"
         "projects projects projects"
         "footer footer footer";
 }
@@ -309,7 +308,6 @@ a {
         display: none;
     }
 
-
     img {
         display: inline;
         margin: 0 auto;
@@ -318,5 +316,9 @@ a {
         width: 200px;
         height: 200px;
         border-radius: 50%;
+    }
+
+    .minLineHeight {
+        line-height: 6pt;
     }
 }
