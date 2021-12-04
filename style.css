@@ -231,7 +231,7 @@ a {
     }
 }
 
-@media only screen and (min-width: 1110px) {
+@media only screen and (min-width: 1170px) {
     #navigationMobile {
         grid-area: contactMobile;
         display: none;
@@ -243,7 +243,7 @@ a {
     }
 }
 
-@media only screen and (max-width: 1109px) {
+@media only screen and (max-width: 1169px) {
     body {
         margin: 9%;
         text-align: center;
