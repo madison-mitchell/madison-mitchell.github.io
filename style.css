@@ -85,7 +85,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex: 1 1 auto;
-    /* align-items: center; */
     justify-content: center;
 }
 
@@ -107,6 +106,13 @@ img {
     display: inline;
     margin: 0 auto;
     width: auto;
+    /* width: 700px; */
+}
+
+.aboutMePhoto {
+    display: inline;
+    margin: 0 auto;
+    width: auto;
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -118,6 +124,10 @@ img {
     width: auto;
     height: 310px;
     padding: 10px 20px;
+}
+
+.gif {
+    width: 90%;
 }
 
 h1 {
@@ -167,9 +177,13 @@ article {
     text-align: center;
 }
 
-
 .smallBox {
     width: 300px;
+}
+
+.mediumBox {
+    width: 90%;
+    margin: auto;
 }
 
 .wrapper {
@@ -202,7 +216,8 @@ a {
     padding: 0px 15px;
 }
 
-.icon:hover {
+.icon:hover,
+.gif:hover {
     transform: scale(1.5);
 }
 
@@ -310,12 +325,19 @@ a {
     img {
         display: inline;
         margin: 0 auto;
-        height: 100%;
+        width: auto;
+        width: 700px;
+    }
+
+    .aboutMePhoto {
+        display: inline;
+        margin: 0 auto;
         width: auto;
         width: 200px;
         height: 200px;
         border-radius: 50%;
     }
+
 
     .minLineHeight {
         line-height: 6pt;
@@ -323,5 +345,9 @@ a {
 
     .maxLineHeight {
         line-height: 36pt;
+    }
+
+    .mediumBox {
+        width: 90%;
     }
 }
