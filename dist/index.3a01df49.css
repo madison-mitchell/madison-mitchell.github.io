@@ -1,0 +1,102 @@
+* {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+}
+
+#wrapper {
+    width: 1024px;
+    padding: 10px 0;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: end;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-link {
+    margin: 5px 25px;
+}
+
+.about-me-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    column-gap: 30px;
+    grid-template-areas:
+        "headshot header";
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.headshot {
+    grid-area: "headshot";
+    height: 300px;
+}
+
+.headshot-img {
+    max-width: 300px;
+    border-radius: 20px;
+}
+
+.header-grid {
+    grid-area: "header";
+    grid-template-rows: repeat(2, 1fr);
+    margin: auto auto;
+    display: grid;
+}
+
+.header {
+    display: flex;
+    margin: auto auto;
+    padding: 20px auto;
+}
+
+.name {
+    font-size: 35pt;
+}
+
+.title {
+    font-size: x-large;
+}
+
+.name,
+.title {
+    text-align: center;
+    padding: 10px 10px;
+}
+
+
+
+/* TEXT ALIGNMENT STYLING BELOW */
+
+.html-text {
+    display: block;
+    color: #A0A0A0;
+    font-family: 'Roboto Mono', monospace;
+    /* font-style: italic; */
+    font-size: small;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-top {
+    display: inline-block;
+    align-self: flex-start;
+}
+
+.align-bottom {
+    display: inline-block;
+    align-self: flex-end;
+}
+/*# sourceMappingURL=index.3a01df49.css.map */

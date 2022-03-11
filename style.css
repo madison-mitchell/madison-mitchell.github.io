@@ -1,387 +1,101 @@
-html {
-    scroll-behavior: smooth;
+* {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
 }
 
-body {
-    background-color: #EFEFEF;
-    margin: 5% auto;
-    max-width: 920px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-#navigation {
-    grid-area: navigation;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    background-color: #CAEBF2;
-    color: #000;
-    height: fit-content;
-    text-align: center;
-    letter-spacing: 2px;
-    padding: 10px 30px 10px 30px;
-    line-height: 20pt;
-}
-
-#photo {
-    grid-area: photo;
-    background-color: #FF3B3f;
-    height: auto;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    padding-top: 15%;
-}
-
-#header {
-    grid-area: header;
-    background-color: #CAEBF2;
-    height: fit-content;
-    text-align: center;
-    font-size: xx-large;
-    line-height: 30%;
-    padding: 20px 20px;
-}
-
-#contact {
-    grid-area: contact;
-    background-color: #CAEBF2;
-    height: fit-content;
-    padding: 20px 20px;
-    text-align: center;
-}
-
-#socials {
-    grid-area: socials;
-    background-color: #CAEBF2;
-    height: fit-content;
-    padding: 20px 20px;
-    text-align: center;
-}
-
-#aboutMe {
-    grid-area: aboutMe;
-    background-color: #CAEBF2;
-    text-align: center;
-    height: auto;
-    padding: 20px 20px;
-}
-
-#skills {
-    grid-area: skills;
-    background-color: #A9A9A9;
-    text-align: center;
-    font-size: large;
-    padding: 20px 20px;
-}
-
-#projects {
-    grid-area: projects;
-    background-color: #CAEBF2;
-    text-align: center;
-    font-size: large;
-    padding: 20px 20px;
-}
-
-.box {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1 1 auto;
-    justify-content: center;
-}
-
-#one,
-#two,
-#three {
-    padding: 20px 20px;
-}
-
-#footer {
-    padding: 5px 5px 5px 5px;
-    color: #FF3B3f;
-}
-
-.footer {
-    grid-area: footer;
-    background-color: #CAEBF2;
-    text-align: center;
-    height: fit-content;
-}
-
-img {
-    display: inline;
+#wrapper {
+    width: 1024px;
+    padding: 10px 0;
     margin: 0 auto;
 }
 
-.aboutMePhoto {
-    display: inline;
-    margin: 0 auto;
-    width: auto;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-}
-
-.icon {
-    display: inline;
-    margin: 0 auto;
-    width: auto;
-    height: 310px;
-    padding: 10px 20px;
-}
-
-.gif {
-    width: 90%;
-}
-
-iframe {
-    width: 775px;
-    height: 600px
-}
-
-h1 {
-    font-family: 'Birthstone Bounce', cursive;
-    font-size: 36pt;
-    color: #FF3B3f;
-    text-align: center;
-    line-height: 34pt;
-}
-
-h2 {
-    font-size: large;
-    color: #888;
-    text-align: center;
-}
-
-h3 {
-    font-size: x-large;
-    color: #FF3B3f;
-    text-align: center;
-}
-
-h1,
-h2,
-h3 {
-    margin: 0px 0px 0px 0px;
-}
-
-h4 {
-    font-size: x-large;
-    font-weight: normal;
-    color: #A9A9A9;
-    text-align: center;
-    display: inline;
-    padding-top: 10px;
-}
-
-.sectionHeader {
-    margin-bottom: 5px;
-}
-
-p {
-    text-align: justify;
-}
-
-article {
-    text-align: center;
-}
-
-.smallBox {
-    width: 375px;
-}
-
-.mediumBox {
-    width: 775px;
-    margin: auto;
-}
-
-
-#six-mobile {
-    display: none;
-}
-
-.wrapper {
-    color: #000;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 220px 1fr 1fr;
-    grid-template-areas:
-        "navigation navigation navigation"
-        "photo header header"
-        "photo contact socials"
-        "skills aboutMe aboutMe"
-        "projects projects projects"
-        "footer footer footer";
-}
-
-div,
 nav {
-    border-radius: 8px;
+    display: flex;
+    justify-content: end;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-link {
+    margin: 5px 25px;
+}
+
+.about-me-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    column-gap: 30px;
+    grid-template-areas:
+        "headshot header";
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.headshot {
+    grid-area: "headshot";
+    height: 300px;
+}
+
+.headshot-img {
+    max-width: 300px;
+    border-radius: 20px;
+}
+
+.header-grid {
+    grid-area: "header";
+    grid-template-rows: repeat(2, 1fr);
+    margin: auto auto;
+    display: grid;
+}
+
+.header {
+    display: flex;
+    margin: auto auto;
+    padding: 20px auto;
+}
+
+.name {
+    font-size: 35pt;
+}
+
+.title {
+    font-size: x-large;
+}
+
+.name,
+.title {
+    text-align: center;
+    padding: 10px 10px;
 }
 
 
-a:hover {
-    color: #FF3B3f;
+
+/* TEXT ALIGNMENT STYLING BELOW */
+
+.html-text {
+    display: block;
+    color: #A0A0A0;
+    font-family: 'Roboto Mono', monospace;
+    /* font-style: italic; */
+    font-size: small;
 }
 
-a {
-    color: #000;
-    text-decoration: none;
-    padding: 0px 15px;
+.align-left {
+    text-align: left;
 }
 
-.icon:hover,
-.gif:hover {
-    transform: scale(1.5);
-    transition: all .4s ease;
-    -webkit-transition: all .4s ease;
+.align-right {
+    text-align: right;
 }
 
-:target {
-    -webkit-animation: target-fade 1s;
-    animation: target-fade 1s;
+.align-top {
+    display: inline-block;
+    align-self: flex-start;
 }
 
-@-webkit-keyframes target-fade {
-    from {
-        background-color: #FF3B3f;
-    }
-
-    to {
-        background-color: transparent;
-    }
-}
-
-@keyframes target-fade {
-    from {
-        background-color: #FF3B3f;
-    }
-
-    to {
-        background-color: transparent;
-    }
-}
-
-@media only screen and (min-width: 1170px) {
-    #navigationMobile {
-        grid-area: contactMobile;
-        display: none;
-    }
-
-    #contactMobile {
-        grid-area: contactMobile;
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 1169px) {
-    body {
-        margin: 3%;
-        text-align: center;
-    }
-
-    .wrapper {
-        color: #000;
-        display: grid;
-        text-align: center;
-        grid-gap: 10px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-            "navigation navigation"
-            "photo photo"
-            "header header"
-            "contactMobile socials"
-            "aboutMe aboutMe"
-            "skills skills"
-            "projects projects"
-            "footer footer";
-    }
-
-    #photo {
-        grid-area: photo;
-        background-color: #FF3B3f;
-        height: 210px;
-        position: relative;
-        overflow: hidden;
-        text-align: center;
-        padding-top: 15px;
-    }
-
-    #navigationMobile {
-        grid-area: navigation;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        background-color: #CAEBF2;
-        color: #000;
-        text-align: center;
-        letter-spacing: 2px;
-        padding-top: 8px;
-        padding-left: 60px;
-        padding-right: 60px;
-        line-height: 20pt;
-    }
-
-    #contactMobile {
-        grid-area: contactMobile;
-        background-color: #CAEBF2;
-        height: fit-content;
-        padding: 20px 20px;
-        text-align: center;
-    }
-
-    #navigation {
-        display: none;
-    }
-
-    #contact {
-        display: none;
-    }
-
-    img {
-        display: inline;
-        margin: 0 auto;
-        width: auto;
-        width: 700px;
-    }
-
-    .aboutMePhoto {
-        display: inline;
-        margin: 0 auto;
-        width: auto;
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-    }
-
-
-    .minLineHeight {
-        line-height: 6pt;
-    }
-
-    .maxLineHeight {
-        line-height: 36pt;
-    }
-
-    .mediumBox {
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .smallBox {
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    #six {
-        display: none;
-    }
-
-    .icon-mobile {
-        max-width: 100%;
-    }
-
-    #three {
-        padding: 0;
-    }
+.align-bottom {
+    display: inline-block;
+    align-self: flex-end;
 }

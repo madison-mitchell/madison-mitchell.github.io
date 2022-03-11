@@ -1,0 +1,30 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest --watchAll"
+  },
+  "keywords": [],
+  "author": "Madison Mitchell",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@parcel/transformer-webmanifest": "^2.3.2",
+    "babel-jest": "^27.0.6",
+    "jest": "^27.0.6",
+    "parcel": "^2.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madison-mitchell/madison-mitchell.github.io.git"
+  },
+  "homepage": "https://github.com/madison-mitchell/madison-mitchell.github.io#readme",
+  "dependencies": {
+    "node": "^17.5.0"
+  }
+}
