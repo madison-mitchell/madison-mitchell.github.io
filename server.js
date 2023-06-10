@@ -1,17 +1,22 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 
 // Configure body-parser middleware to parse JSON data
 app.use(bodyParser.json());
 
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-  next();
-});
+// Serve static files from the "dist" directory
+app.use(express.static(path.join(__dirname, 'dist')));
+
+
+// app.use((req, res, next) => {
+//   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
+//   res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
+//   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+//   next();
+// });
 
 // Define a helper function to format the email message as HTML
 function formatEmailMessage(formData) {
@@ -84,9 +89,14 @@ app.post('/api/send-email', (req, res) => {
   });
 });
 
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
+
 // Start the server
-app.listen(3000, () => {
-  console.log('Server is running on http://localhost:3000');
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log('Server is running on http://localhost:' + port);
 });
 
 
