@@ -7,7 +7,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build && copy-dist"
+    "build": "vue-cli-service build && cp -r dist/* ."
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.14",
