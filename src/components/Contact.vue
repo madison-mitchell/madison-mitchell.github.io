@@ -109,6 +109,8 @@ export default {
     },
     methods: {
         sendEmail() {
+            this.isButtonDisabled = true;
+
             if (!this.isValidEmail()) {
                 console.log('Invalid email');
                 return;
