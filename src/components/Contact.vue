@@ -109,6 +109,8 @@ export default {
     },
     methods: {
         sendEmail() {
+            this.isButtonDisabled = true;
+
             if (!this.isValidEmail()) {
                 console.log('Invalid email');
                 return;
@@ -146,7 +148,6 @@ export default {
         },
         validateForm() {
                 this.isButtonDisabled = !this.isFormValid;
-                console.log('Is button disabled?', this.isButtonDisabled);
             },
         isValidEmail() {
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -162,7 +163,6 @@ export default {
                 this.formData.email &&
                 this.formData.message &&
                 emailRegex.test(this.formData.email);
-            console.log('Is form valid?', isValid);
             return isValid;
         },
         isInvalidEmail() {
