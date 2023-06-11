@@ -8,7 +8,7 @@
             </header>
             <p class="col-span-4">Below is a quick overview of my main technical skill sets and technologies I use. Want to find out more about my experience? Check out my online resume and project portfolio.</p>
             <div class="skill-grid grid grid-cols-4 col-span-4 gap-8">
-                <div class="skills-java bg-white drop-shadow-md rounded-xl p-4">
+                <div class="skills-java">
                     <i class="fa-brands fa-java fa-2xl mb-4"></i>
                     <h1 class="font-bold text-lg">Java</h1>
                     <ul class="ml-4 text-left">
@@ -23,7 +23,7 @@
                         <li>IntelliJ</li>
                     </ul>
                 </div>
-                <div class="skills-dotnet bg-white drop-shadow-md rounded-xl p-4">
+                <div class="skills-dotnet">
                     <img class="h-6" src="../assets/dotnet-rectangle.png" alt="">
                     <h1 class="font-bold text-lg mb-2">.NET</h1>
                     <ul class="ml-4 text-left">
@@ -33,14 +33,14 @@
                         <li>Visual Studio</li>
                     </ul>
                 </div>
-                <div class="skills-sql bg-white drop-shadow-md rounded-xl p-4">
+                <div class="skills-sql">
                     <img class="h-6 mb-2" src="../assets/sql.png" alt="">
                     <h1 class="font-bold text-lg">SQL</h1>
                      <ul class="ml-4 text-left">
                         <li>SQL Server Management Studio (SSMS)</li>
                     </ul>                
                 </div>
-                <div class="skills-salesforce bg-white drop-shadow-md rounded-xl p-4">
+                <div class="skills-salesforce">
                     <i class="fa-brands fa-salesforce fa-2xl text-sky-500 mb-4"></i>
                     <h1 class="font-bold text-lg">Salesforce</h1>
                     <ul class="ml-4 text-left">
@@ -50,7 +50,7 @@
                     </ul>
                 </div>
                 
-                <div class="skills-js bg-white drop-shadow-md rounded-xl p-4">
+                <div class="skills-js">
                     <i class="fa-brands fa-square-js text-yellow-400 fa-2xl mb-4"></i>
                     <h1 class="font-bold text-lg">Vanilla JavaScript</h1>
                     <ul class="ml-4 text-left">
@@ -60,7 +60,7 @@
                         <li>Visual Studio Code</li>
                     </ul>
                 </div>
-                <div class="skills-vuejs bg-white drop-shadow-md rounded-xl p-4">
+                <div class="skills-vuejs">
                     <i class="fa-brands fa-vuejs text-emerald-500 fa-2xl mb-4"></i>
                     <h1 class="font-bold text-lg">Vue.js</h1>
                     <ul class="ml-4 text-left">
@@ -71,7 +71,7 @@
                         <li>Visual Studio Code</li>
                     </ul>
                 </div>
-                <div class="skills-tailwindcss bg-white drop-shadow-md rounded-xl p-4">
+                <div class="skills-tailwindcss">
                     <img class="h-6 mb-2" src="../assets/tailwindcss.png" alt="">
                     <h1 class="font-bold text-lg">Tailwind CSS</h1>
                     <ul class="ml-4 text-left">
@@ -80,7 +80,7 @@
                         <li>Visual Studio Code</li>
                     </ul>
                 </div>
-                <div class="skills-html-css bg-white drop-shadow-md rounded-xl p-4">
+                <div class="skills-html-css">
                     <i class="fa-brands fa-html5 fa-2xl mr-1 text-orange-500 mb-4"></i><i class="fa-brands fa-css3-alt fa-2xl ml-1 text-sky-500"></i>
                     <h1 class="font-bold text-lg">HTML & CSS</h1>
                     <ul class="ml-4 text-left">
