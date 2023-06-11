@@ -1,6 +1,6 @@
 <template>
     <div>
-        <header class="flex mt-20 mb-8">
+        <header class="flex my-8">
             <div class="inline-block w-1.5 h-7 bg-sky-500 mr-4"></div>
             <h1 class="flex flex-col text-sky-500 text-2xl font-bold tracking-wider">PROJECTS</h1>
         </header>
