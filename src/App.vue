@@ -1,53 +1,65 @@
 <template>
-<!--  <div class="container h-screen grid grid-cols-4 md:max-w-full lg:max-w-full xl:max-w-full">
-    <div class="left top-0 col-span-1">
-      <NavBar class="sticky top-0" />
+    <div class="container flex sm:max-w-full md:max-w-full lg:max-w-full xl:max-w-full">
+        <div v-if="mobileDevice" class="mobile-device">
+            <MobileNavBar />
+            <router-view class="max-sm:w-full" />
+        </div>
+        <div v-else class="large-device flex w-full max-sm:w-screen">
+            <div class="left top-0 w-72">
+                <NavBar class="sticky top-0" />
+            </div>
+            <div class="right w-full">
+                <router-view />
+            </div>
+        </div>
     </div>
-    <div class="right col-span-3 sm:max-w-full md:max-w-full lg:max-w-full xl:max-w-full">
-        <AboutMe />
-        <Skills />
-
-    </div>
-  </div> -->
-
-  <div class="container flex md:max-w-full lg:max-w-full xl:max-w-full">
-    <div class="left top-0 w-72">
-      <NavBar class="sticky top-0" />
-    </div>
-    <div class="right w-full sm:max-w-full md:max-w-full lg:max-w-full xl:max-w-full">
-        <!-- <AboutMe />
-        <Skills />
-        <Contact /> -->
-        <router-view />
-
-    </div>
-  </div>
-
 </template>
 
 <script>
-import NavBar from '@/components/NavBar.vue';
-// import AboutMe from './components/AboutMe.vue';
-// import Skills from './components/Skills.vue';
-// import Contact from './components/Contact.vue';
+import MobileNavBar from "@/components/MobileNavBar.vue";
+import NavBar from "./components/NavBar.vue";
 
 export default {
-  name: 'App',
-  components: {
-    NavBar,
-    // AboutMe,
-    // Skills,
-    // Contact
-  },
+    name: "App",
+    components: {
+        MobileNavBar,
+        NavBar,
+    },
+    data() {
+        return {
+            mobileDevice: false,
+        };
+    },
+    methods: {
+        handleMediaQuery(event) {
+            this.mobileDevice = event.matches;
+        },
+    },
+    mounted() {
+        const mediaQuery = window.matchMedia("(max-width: 640px)");
+        this.mobileDevice = mediaQuery.matches;
+        mediaQuery.addEventListener("change", this.handleMediaQuery);
+    },
+    beforeDestroy() {
+        const mediaQuery = window.matchMedia("(max-width: 640px)");
+        mediaQuery.removeEventListener("change", this.handleMediaQuery);
+    },
 };
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    width: 100%;
+}
+
+@media (min-width: 641px) {
+    .mobile-device {
+        display: none;
+    }
 }
 </style>

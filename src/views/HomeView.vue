@@ -8,7 +8,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import AboutMe from '../components/AboutMe.vue';
 import Skills from '../components/Skills.vue';
 import Portfolio from '../components/Portfolio.vue';
